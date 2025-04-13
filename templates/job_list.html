@@ -1,0 +1,15 @@
+<div class="job-container row" >
+  <div class ="col-9 mt-3">
+    <h3>{{job.title}}</h3>
+    <p><b>location</b> : {{job.location}}</p>
+    <div>
+      {% if "salary" in job %}
+        <p><b>salary</b> : {{job.salary}}</p>
+      {% endif %} 
+    </div>
+  </div>
+  <div class ="container col-3 text-center align-self-center">
+    <button type="button" class="btn btn-outline-primary">apply</button>
+  </div>
+</div>
+ 

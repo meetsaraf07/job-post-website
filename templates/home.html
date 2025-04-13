@@ -1,0 +1,57 @@
+<doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{company_name}} Careers</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+      <style>
+        #banner{
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+        .job-container{
+          width: auto;
+          height: auto;
+          border: 2px solid #ccc;
+          border-radius: 25px;
+          padding: 15px;
+          padding-bottom: 0px;
+          padding-top: 0px;
+          margin: 20px auto;
+        }
+        .job-container-scroll{
+          overflow-y: scroll;
+          height: 300px;
+          border: 2px solid #ccc;
+          border-radius: 25px;
+          padding: 15px;
+          margin: 20px auto;
+          width: auto;
+        }
+        
+          
+      </style>
+    </head>
+    <body> 
+      <div class="container">
+        <div class="text-center">
+          <h1>{{company_name}} Careers</h1>
+        </div>
+        <div class="text-center">
+          <img src="static/banner.jpg" class="img-fluid" alt="image of a banner" id=banner>
+        </div>
+        <h3 class="text-center">About us</h3>
+        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+        <h2 class="text-center">Job Openning</h2>
+        <div class ="job-container-scroll container">
+          {% for job in jobs %}
+            {% include "job_list.html" %}
+          {% endfor %}
+        </div>
+        <button>contact us</button>
+      </div>
+    </body>
+</html>
+
